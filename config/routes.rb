@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get("/blank_form", { :controller => "macros", :action => "blank_form" })
+  get("/", { :controller => "macros", :action => "blank_form" })
 
   post("/process_form", { :controller => "macros", :action => "process_form" })
 
