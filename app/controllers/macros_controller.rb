@@ -5,7 +5,8 @@ class MacrosController < ApplicationController
   end
 
   def process_form
-    @the_image = params.fetch("image_param")
+    @the_image = params["image_param"]
+    # or you can handle nulls with @the_image = params.fetch("image_param", nil)
     @the_description = params.fetch("description_param")
     
     render({ :template => "macros_templates/process_form" })
