@@ -1,10 +1,3 @@
-<% c = OpenAI::Chat.new %>
-<% c.system("You are a nutritionist") %>
-<% c.schema = '{"name": "nutrition_values","strict": true,"schema": {"type": "object","properties": {  "fat": {    "type": "number",    "description": "The amount of fat in grams."  },  "protein": {    "type": "number",    "description": "The amount of protein in grams."  },  "carbs": {    "type": "number",    "description": "The amount of carbohydrates in grams."  },  "total_calories": {    "type": "number",    "description": "The total calories calculated based on fat, protein, and carbohydrates."  }},"required": [  "fat",  "protein",  "carbs",  "total_calories"],"additionalProperties": false}}'
-%>
-<% c.user("1 slice of Mariano's 9 grain loaf of bread") %>
-<%= c.assistant! %>
-
 <h1> Estimate macros </h1>
 
 <p>Send us an image and/or a description of a meal and we'll ask AI to estimate how many calories and macronutrients it contains:</p>
